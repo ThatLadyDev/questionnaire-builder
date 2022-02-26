@@ -23,13 +23,11 @@ via APIs.
 - Close a form.
 
 ## Software requirements
-
 - Composer
 - PHP 8.1
 - Xampp or its equivalent
 
 ## Packages
-
 - lcobucci/jwt
 - darkaonline/l5-swagger
 - nunomaduro/larastan
