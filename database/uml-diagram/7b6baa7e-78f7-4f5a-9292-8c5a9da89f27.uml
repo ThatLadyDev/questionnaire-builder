@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>7b6baa7e-78f7-4f5a-9292-8c5a9da89f27</OriginalElement>
+  <nodes>
+    <node x="228.0" y="308.0">7b6baa7e-78f7-4f5a-9292-8c5a9da89f27.TABLE:questionnaire-builder.migrations</node>
+    <node x="263.0" y="0.0">7b6baa7e-78f7-4f5a-9292-8c5a9da89f27.TABLE:questionnaire-builder.personal_access_tokens</node>
+    <node x="456.0" y="308.0">7b6baa7e-78f7-4f5a-9292-8c5a9da89f27.TABLE:questionnaire-builder.password_resets</node>
+    <node x="0.0" y="0.0">7b6baa7e-78f7-4f5a-9292-8c5a9da89f27.TABLE:questionnaire-builder.users</node>
+    <node x="0.0" y="308.0">7b6baa7e-78f7-4f5a-9292-8c5a9da89f27.TABLE:questionnaire-builder.failed_jobs</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic" zoom="0.85" showDependencies="false" x="313.5" y="250.99999999999997" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

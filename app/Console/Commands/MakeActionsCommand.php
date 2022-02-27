@@ -2,41 +2,49 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
 
-class MakeActionsCommand extends Command
+class MakeActionsCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:action {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'This command creates custom action classes needed in this application';
 
     /**
-     * Create a new command instance.
+     * The type of class being generated.
      *
-     * @return void
+     * @var string
      */
-    public function __construct()
+    protected $type = 'Action';
+
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
+    protected function getStub(): string
     {
-        parent::__construct();
+        return app_path('Console/Stubs/action.stub');
     }
 
     /**
-     * Execute the console command.
+     * Get the default namespace for the class.
      *
-     * @return int
+     * @param string $rootNamespace
+     * @return string
      */
-    public function handle()
+    protected function getDefaultNamespace($rootNamespace): string
     {
-        return 0;
+        return $rootNamespace . '\Actions';
     }
 }
