@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
  * Authentication routes
  */
 Route::post('/user/create', App\Http\Controllers\Authentication\RegisterController::class);
+Route::post('/admin/create', App\Http\Controllers\Authentication\RegisterController::class)->name('admin.create');
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -22,9 +22,10 @@ class RegisterController extends Controller
     public function __invoke(RegistrationRequest $request): JsonResponse
     {
         try {
-            $this->action->execute($request);
+            $token = $this->action->execute($request);
             return new JsonResponse([
                 'success' => true,
+                'token' => $token,
                 'errors' => null
             ], 200);
         } catch (Exception $e) {
