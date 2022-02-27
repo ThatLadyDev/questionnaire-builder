@@ -16,7 +16,7 @@ class UserRegistrationAction
         $this->service = $service;
     }
 
-    public function execute(RegistrationRequest $request)
+    public function execute(RegistrationRequest $request) : string
     {
         ($request->routeIs('admin.create') === true) ? $request->merge(['is_admin' => 1]) : null;
         $request->merge(['password' => Hash::make($request->password)]);

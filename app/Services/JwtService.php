@@ -4,11 +4,10 @@ namespace App\Services;
 
 use Illuminate\Container\Container;
 use Lcobucci\JWT\Configuration;
-use Lcobucci\JWT\Signer\Key\InMemory;
-use Lcobucci\JWT\Signer;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use DateTimeImmutable;
+use Lcobucci\JWT\Token\Plain;
 
 class JwtService
 {
@@ -39,7 +38,7 @@ class JwtService
         assert($this->config instanceof Configuration);
     }
 
-    public function issueToken()
+    public function issueToken() : string
     {
         $token = $this->config->builder()
             // Configures the issuer (iss claim)
@@ -62,16 +61,16 @@ class JwtService
         return $token->toString();
     }
 
-    public function verifyToken()
-    {
-    }
-
-    public function deleteToken()
-    {
-    }
-
-    public function refreshToken()
-    {
-    }
+//    public function verifyToken()
+//    {
+//    }
+//
+//    public function deleteToken()
+//    {
+//    }
+//
+//    public function refreshToken()
+//    {
+//    }
 
 }
